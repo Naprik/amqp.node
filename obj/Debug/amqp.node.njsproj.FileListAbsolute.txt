@@ -1,0 +1,2 @@
+D:\Projects\amqp.node\bin\Microsoft.NodejsTools.WebRole.dll
+D:\Projects\amqp.node\obj\Debug\amqp.node.njsprojResolveAssemblyReference.cache

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ada57481-4f1e-406f-9e0e-7d6fa7d45e37}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>examples\tutorials\rpc_server.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="CHANGELOG.md" />
+    <Content Include="README.md" />
+    <Compile Include="callback_api.js" />
+    <Compile Include="channel_api.js" />
+    <Compile Include="bin\generate-defs.js" />
+    <Compile Include="examples\headers.js" />
+    <Compile Include="examples\send_generators.js" />
+    <Compile Include="examples\ssl.js" />
+    <Compile Include="examples\waitForConfirms.js" />
+    <Compile Include="lib\api_args.js" />
+    <Compile Include="lib\bitset.js" />
+    <Compile Include="lib\callback_model.js" />
+    <Compile Include="lib\channel.js" />
+    <Compile Include="lib\channel_model.js" />
+    <Compile Include="lib\codec.js" />
+    <Compile Include="lib\connect.js" />
+    <Compile Include="lib\connection.js" />
+    <Compile Include="lib\credentials.js" />
+    <Compile Include="lib\error.js" />
+    <Compile Include="lib\format.js" />
+    <Compile Include="lib\frame.js" />
+    <Compile Include="lib\heartbeat.js" />
+    <Compile Include="lib\mux.js" />
+    <Compile Include="test\bitset.js" />
+    <Compile Include="test\callback_api.js" />
+    <Compile Include="test\channel.js" />
+    <Compile Include="test\channel_api.js" />
+    <Compile Include="test\codec.js" />
+    <Compile Include="test\connect.js" />
+    <Compile Include="test\connection.js" />
+    <Compile Include="test\data.js" />
+    <Compile Include="test\frame.js" />
+    <Compile Include="test\mux.js" />
+    <Compile Include="test\util.js" />
+    <Content Include="examples\tutorials\package.json" />
+    <Content Include="examples\tutorials\README.md" />
+    <Compile Include="examples\tutorials\emit_log.js" />
+    <Compile Include="examples\tutorials\emit_log_direct.js" />
+    <Compile Include="examples\tutorials\emit_log_topic.js" />
+    <Compile Include="examples\tutorials\new_task.js" />
+    <Compile Include="examples\tutorials\receive.js" />
+    <Compile Include="examples\tutorials\receive_logs.js" />
+    <Compile Include="examples\tutorials\receive_logs_direct.js" />
+    <Compile Include="examples\tutorials\receive_logs_topic.js" />
+    <Compile Include="examples\tutorials\rpc_client.js" />
+    <Compile Include="examples\tutorials\rpc_server.js" />
+    <Compile Include="examples\tutorials\send.js" />
+    <Compile Include="examples\tutorials\worker.js" />
+    <Compile Include="examples\tutorials\callback_api\emit_log.js" />
+    <Compile Include="examples\tutorials\callback_api\emit_log_direct.js" />
+    <Compile Include="examples\tutorials\callback_api\emit_log_topic.js" />
+    <Compile Include="examples\tutorials\callback_api\new_task.js" />
+    <Compile Include="examples\tutorials\callback_api\receive.js" />
+    <Compile Include="examples\tutorials\callback_api\receive_logs.js" />
+    <Compile Include="examples\tutorials\callback_api\receive_logs_direct.js" />
+    <Compile Include="examples\tutorials\callback_api\receive_logs_topic.js" />
+    <Compile Include="examples\tutorials\callback_api\rpc_client.js" />
+    <Compile Include="examples\tutorials\callback_api\rpc_server.js" />
+    <Compile Include="examples\tutorials\callback_api\send.js" />
+    <Compile Include="examples\tutorials\callback_api\worker.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin" />
+    <Folder Include="examples" />
+    <Folder Include="examples\tutorials" />
+    <Folder Include="examples\tutorials\callback_api" />
+    <Folder Include="lib" />
+    <Folder Include="test" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\istanbul\" />
+    <Folder Include="typings\globals\mocha\" />
+    <Folder Include="typings\globals\node\" />
+    <Folder Include="typings\globals\uglify-js\" />
+    <Folder Include="typings\globals\when\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\istanbul\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\mocha\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\uglify-js\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\when\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/befa2dae51c784104b7de37300b931900861728c/when/when.d.ts",
+    "raw": "registry:dt/when#2.4.0+20161012125724",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/befa2dae51c784104b7de37300b931900861728c/when/when.d.ts"
+  }
+}
