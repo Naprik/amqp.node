@@ -11,7 +11,7 @@ amqp.connect('amqp://localhost').then(function(conn) {
       });
       ok = ok.then(function (qok) {
           var queueName = qok.queue;
-          return ch.bindQueue(queueName, "beehive.issueComments", "IssuesCreatedCommandsRoutingKey").then(function () {
+          return ch.bindQueue(queueName, "beehive.issueTimeline", "IssuesCreatedCommandsRoutingKey").then(function () {
               return qok.queue;
           });
       });
@@ -25,7 +25,7 @@ amqp.connect('amqp://localhost').then(function(conn) {
 
     function reply(msg) {
         const response = {
-            entityType: 'IssueComment',
+            entityType: 'IssueTimeline',
             entityId: '580672997925a799e8ac072e',
             //eventName: msg.customProperties.eventName,
             //socketId: msg.customProperties.socketId
